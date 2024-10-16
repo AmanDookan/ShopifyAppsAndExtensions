@@ -1,0 +1,29 @@
+# Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
+
+client_id = "7888420bce5742ccce0aac12348fbd90"
+name = "add-tags"
+handle = "add-tags-1"
+application_url = "https://gone-fed-turner-intelligence.trycloudflare.com"
+embedded = true
+
+[build]
+automatically_update_urls_on_dev = true
+dev_store_url = "memorees.myshopify.com"
+include_config_on_deploy = true
+
+[access_scopes]
+# Learn more at https://shopify.dev/docs/apps/tools/cli/configuration#access_scopes
+scopes = "read_cart_transforms,read_customers,read_inventory,read_metaobjects,read_orders,read_products,read_validations,unauthenticated_read_product_listings,write_customers,write_discounts,write_inventory,write_products"
+
+[auth]
+redirect_urls = [
+  "https://gone-fed-turner-intelligence.trycloudflare.com/auth/callback",
+  "https://gone-fed-turner-intelligence.trycloudflare.com/auth/shopify/callback",
+  "https://gone-fed-turner-intelligence.trycloudflare.com/api/auth/callback"
+]
+
+[webhooks]
+api_version = "2024-04"
+
+[pos]
+embedded = false

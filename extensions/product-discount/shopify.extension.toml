@@ -1,0 +1,30 @@
+api_version = "2024-07"
+
+[[extensions]]
+name = "t:name"
+handle = "product-discount"
+type = "function"
+
+description = "t:description"
+
+  [[extensions.targeting]]
+  target = "purchase.product-discount.run"
+  input_query = "src/run.graphql"
+  export = "run"
+
+  [extensions.build]
+  command = "cargo wasi build --release"
+  path = "target/wasm32-wasi/release/product-discount.wasm"
+  watch = [ "src/**/*.rs" ]
+  
+  
+  [extensions.input.variables]
+  namespace = "$app:cart_value_bands"
+  key = "bands"
+  
+  [access_scopes]
+  scopes = "write_products, write_discounts, write_discounts_allocator_functions, read_products"
+
+  [extensions.ui.paths]
+  create = "/"
+  details = "/"

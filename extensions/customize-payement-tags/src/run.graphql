@@ -1,0 +1,16 @@
+query RunInput {
+   paymentMethods {
+    id
+    name
+  }
+  cart {
+    buyerIdentity {
+      customer {
+        hasTags(tags: ["Testing_Payment_Customization", "restricted", "no_payment"]) { 
+          tag
+          hasTag
+        }
+      }
+    }
+  }
+}

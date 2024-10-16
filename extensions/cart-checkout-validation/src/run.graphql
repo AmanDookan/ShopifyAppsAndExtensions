@@ -1,0 +1,25 @@
+query RunInput($collectionIds: [ID!]!) {
+  cart {
+    lines {
+      quantity
+      merchandise{
+        ... on ProductVariant{
+          id
+          sku
+          product{
+            inCollections(ids: $collectionIds)
+            {
+              collectionId
+              isMember
+            }
+          }
+        }
+      }
+    }
+  }
+  validation {
+    metafield(namespace: "$app:checkout_validation", key: "config") {
+      value
+    }
+  }
+}

@@ -1,0 +1,35 @@
+query Input($collectionIds: [ID!]!) {
+  cart {
+    lines {
+      id
+      quantity
+      cost {
+        amountPerQuantity {
+          amount
+          currencyCode
+        }
+      }
+      merchandise {
+        __typename
+        ... on ProductVariant {
+          id
+          sku
+          product {
+            inCollections(ids: $collectionIds) {
+              collectionId
+              isMember
+            }
+            metafield(namespace: "discount_function", key: "product_discount_data") {
+              value
+            }
+          }
+        }
+      }
+    }
+  }
+  discountNode {
+    metafield(namespace: "$app:cart_value_bands", key: "bands") {
+      value
+    }
+  }
+}
