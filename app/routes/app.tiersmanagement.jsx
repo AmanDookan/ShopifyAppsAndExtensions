@@ -224,7 +224,7 @@ const existingGifts = gifts ? JSON.parse(gifts.value || '[]') : [];
   const handleDiscardChanges = () => {
     if (JSON.stringify(existingTiers) === JSON.stringify(stagedTiers) &&
         JSON.stringify(existingGifts) === JSON.stringify(stagedGifts)) {
-      // No changes, return or show message if desired
+      // No changes, return or sh ow message if desired
       return;
     }
 

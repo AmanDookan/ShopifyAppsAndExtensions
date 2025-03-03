@@ -26,7 +26,7 @@ export default function App() {
         <Link to="/app/discount">Manage Discounts</Link>
         <Link to="/app/HsCodeUpdate">Update HS Code</Link>
         <Link to="/app/addCollections">Add Collection</Link>
-        <Link to="/app/discountFunctions">Manage discount data</Link>
+        
       </NavMenu>
       <Outlet />
     </AppProvider>

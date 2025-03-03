@@ -3,7 +3,7 @@
 client_id = "7888420bce5742ccce0aac12348fbd90"
 name = "add-tags"
 handle = "add-tags-1"
-application_url = "https://gone-fed-turner-intelligence.trycloudflare.com"
+application_url = "https://congress-distinction-anyone-translation.trycloudflare.com"
 embedded = true
 
 [build]
@@ -17,9 +17,9 @@ scopes = "read_cart_transforms,read_customers,read_inventory,read_metaobjects,re
 
 [auth]
 redirect_urls = [
-  "https://gone-fed-turner-intelligence.trycloudflare.com/auth/callback",
-  "https://gone-fed-turner-intelligence.trycloudflare.com/auth/shopify/callback",
-  "https://gone-fed-turner-intelligence.trycloudflare.com/api/auth/callback"
+  "https://congress-distinction-anyone-translation.trycloudflare.com/auth/callback",
+  "https://congress-distinction-anyone-translation.trycloudflare.com/auth/shopify/callback",
+  "https://congress-distinction-anyone-translation.trycloudflare.com/api/auth/callback"
 ]
 
 [webhooks]
